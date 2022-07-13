@@ -8,7 +8,8 @@ export const Container = styled.aside<SideBarProps>`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 144px;
+  top: 72px;
+  padding-top: 56px;
   align-items: center;
   width: ${({ isOpen }) => (isOpen ? "252px" : "0")};
 
@@ -54,7 +55,5 @@ export const Container = styled.aside<SideBarProps>`
     color: white;
   }
 
-  @media (max-width: 768px) {
-    display: ${({ isOpen }) => (isOpen ? "none" : "flex")};
-  }
+
 `

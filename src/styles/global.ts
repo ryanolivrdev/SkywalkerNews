@@ -67,6 +67,12 @@ export default createGlobalStyle`
     font-weight: 400;
   }
 
+  p {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
   button, a {
     cursor: pointer;
     text-decoration: none;

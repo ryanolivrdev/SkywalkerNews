@@ -16,7 +16,6 @@ export function Navbar() {
     setIsOpen(false);
   }
 
-  console.log(isOpen);
   return (
     <>
     <Container>
@@ -38,7 +37,7 @@ export function Navbar() {
       </button>
 
     </Container>
-    <Sidebar isOpen={isOpen}/>
+    <Sidebar isOpen={isOpen} CloseNavBar={closeNavBar}/>
     </>
   );
 }

@@ -5,25 +5,24 @@ import { Link, useParams } from "react-router-dom";
 
 interface SideBarProps {
   isOpen: boolean;
+  CloseNavBar: any;
 }
 
 export function Sidebar(props: SideBarProps) {
   const { slug } = useParams<{ slug: string }>();
 
-  console.log(props.isOpen);
-
   return (
     <Container isOpen={props.isOpen}>
-      {slug === "topstories" || !slug ? (
+      {slug === "Principaisnoticias" || !slug ? (
         <>
-          <Link className="AtiveLink" to="/topstories">
+          <Link className="AtiveLink" to="/Principaisnoticias" onClick={props.CloseNavBar}>
             <Globe size={32} color="white" />
             <p className="Ative">Principais Notícias</p>
           </Link>
         </>
       ) : (
         <>
-          <Link to="/topstories">
+          <Link to="/Principaisnoticias" onClick={props.CloseNavBar}>
             <Globe size={32} color="#C4C4CC" />
             <p>Principais Notícias</p>
           </Link>
@@ -31,90 +30,90 @@ export function Sidebar(props: SideBarProps) {
       )}
       {slug === "covid-19" ? (
         <>
-          <Link className="AtiveLink" to="/topics/covid-19">
+          <Link className="AtiveLink" to="/topics/Covid-19" onClick={props.CloseNavBar}>
             <ShieldPlus size={32} color="white" />
             <p className="Ative">Covid-19</p>
           </Link>
         </>
       ) : (
         <>
-          <Link to="/topics/covid-19">
+          <Link to="/topics/Covid-19" onClick={props.CloseNavBar}>
             <ShieldPlus size={32} color="#C4C4CC" />
             <p>Covid-19</p>
           </Link>
         </>
       )}
       {props.isOpen ? <Divider /> : ""}
-      {slug === "entertainment" ? (
+      {slug === "Entretenimento" ? (
         <>
-          <Link className="AtiveLink" to="/topics/entertainment">
+          <Link className="AtiveLink" to="/topics/Entretenimento" onClick={props.CloseNavBar}>
             <FilmStrip size={32} color="white" />
             <p className="Ative">Entretenimento</p>
           </Link>
         </>
       ) : (
         <>
-          <Link to="/topics/entertainment">
+          <Link to="/topics/Entretenimento" onClick={props.CloseNavBar}>
             <FilmStrip size={32} color="#C4C4CC" />
             <p>Entretenimento</p>
           </Link>
         </>
       )}
-      {slug === "technology" ? (
+      {slug === "Tecnologia" ? (
         <>
-          <Link className="AtiveLink" to="/topics/technology">
+          <Link className="AtiveLink" to="/topics/Tecnologia" onClick={props.CloseNavBar}>
             <RocketLaunch size={32} color="white" />
             <p className="Ative">Tecnologia</p>
           </Link>
         </>
       ) : (
         <>
-          <Link to="/topics/technology">
+          <Link to="/topics/Tecnologia" onClick={props.CloseNavBar}>
             <RocketLaunch size={32} color="#C4C4CC" />
             <p>Tecnologia</p>
           </Link>
         </>
       )}
-      {slug === "business" ? (
+      {slug === "Negocio" ? (
         <>
-          <Link className="AtiveLink" to="/topics/business">
+          <Link className="AtiveLink" to="/topics/Negocio" onClick={props.CloseNavBar}>
             <Briefcase size={32} color="white" />
             <p className="Ative">Negócio</p>
           </Link>
         </>
       ) : (
         <>
-          <Link to="/topics/business">
+          <Link to="/topics/Negocio" onClick={props.CloseNavBar}>
             <Briefcase size={32} color="#C4C4CC" />
             <p>Negócio</p>
           </Link>
         </>
       )}
-      {slug === "sports" ? (
+      {slug === "Esportes" ? (
         <>
-          <Link className="AtiveLink" to="/topics/sports">
+          <Link className="AtiveLink" to="/topics/Esportes" onClick={props.CloseNavBar}>
             <Bicycle size={32} color="white" />
             <p className="Ative">Esportes</p>
           </Link>
         </>
       ) : (
         <>
-          <Link to="/topics/sports">
+          <Link to="/topics/Esportes" onClick={props.CloseNavBar}>
             <Bicycle size={32} color="#C4C4CC" />
             <p>Esportes</p>
           </Link>
         </>
       )}
-      {slug === "health" ? (
+      {slug === "Saude" ? (
         <>
-          <Link className="AtiveLink" to="/topics/health">
+          <Link className="AtiveLink" to="/topics/Saude" onClick={props.CloseNavBar}>
             <FirstAid size={32} color="white" />
             <p className="Ative">Saúde</p>
           </Link>
         </>
       ) : (
         <>
-          <Link to="/topics/health">
+          <Link to="/topics/Saude" onClick={props.CloseNavBar}>
             <FirstAid size={32} color="#C4C4CC" />
             <p>Saúde</p>
           </Link>

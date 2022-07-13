@@ -62,19 +62,19 @@ export const Container = styled.nav`
     transition: all 0.2s ease-in;
 
     @media (max-width: 900px) {
-      margin-left: 0; // 14px
+      margin-left: 0;
     }
     @media (max-width: 600px) {
-      width: 20rem;// 14px
+      width: 20rem;
     }
     @media (max-width: 450px) {
-      width: 15rem;// 14px
+      width: 15rem;
     }
     @media (max-width: 370px) {
-      width: 10rem;// 14px
+      width: 10rem;
     }
-    @media (max-width: 370px) {
-      width: 5rem;// 14px
+    @media (max-width: 290px) {
+      width: 5rem;
     }
   }
   input:hover {
