@@ -13,15 +13,9 @@ export function Sidebar(props: SideBarProps) {
 
   slug = slug?.toLowerCase()
 
-  function LinkReload(){
-    props.CloseNavBar();
-    //preventDefault();
-    //window.location.reload();
-  }
-
   return (
     <Container isOpen={props.isOpen}>
-      {slug === "Principaisnoticias" || !slug ? (
+      {slug === "principaisnoticias" || !slug ? (
         <>
           <Link className="AtiveLink" to="/topics/Principaisnoticias" onClick={props.CloseNavBar}>
             <Globe size={32} color="white" />
@@ -30,7 +24,7 @@ export function Sidebar(props: SideBarProps) {
         </>
       ) : (
         <>
-          <Link to="/topics/Principaisnoticias" onClick={LinkReload}>
+          <Link to="/topics/Principaisnoticias" onClick={props.CloseNavBar}>
             <Globe size={32} color="#C4C4CC" />
             <p>Principais Notícias</p>
           </Link>
@@ -45,7 +39,7 @@ export function Sidebar(props: SideBarProps) {
         </>
       ) : (
         <>
-          <Link to="/topics/Covid-19" onClick={LinkReload}>
+          <Link to="/topics/Covid-19" onClick={props.CloseNavBar}>
             <ShieldPlus size={32} color="#C4C4CC" />
             <p>Covid-19</p>
           </Link>
@@ -61,7 +55,7 @@ export function Sidebar(props: SideBarProps) {
         </>
       ) : (
         <>
-          <Link to="/topics/Entretenimento" onClick={LinkReload}>
+          <Link to="/topics/Entretenimento" onClick={props.CloseNavBar}>
             <FilmStrip size={32} color="#C4C4CC" />
             <p>Entretenimento</p>
           </Link>
@@ -76,7 +70,7 @@ export function Sidebar(props: SideBarProps) {
         </>
       ) : (
         <>
-          <Link to="/topics/Tecnologia" onClick={LinkReload}>
+          <Link to="/topics/Tecnologia" onClick={props.CloseNavBar}>
             <RocketLaunch size={32} color="#C4C4CC" />
             <p>Tecnologia</p>
           </Link>
@@ -91,13 +85,13 @@ export function Sidebar(props: SideBarProps) {
         </>
       ) : (
         <>
-          <Link to="/topics/Economia" onClick={LinkReload}>
+          <Link to="/topics/Economia" onClick={props.CloseNavBar}>
             <Briefcase size={32} color="#C4C4CC" />
             <p>Economia</p>
           </Link>
         </>
       )}
-      {slug === "esporte" ? (
+      {slug === "esportivo" ? (
         <>
           <Link className="AtiveLink" to="/topics/Esportivo" onClick={props.CloseNavBar}>
             <Bicycle size={32} color="white" />
@@ -106,7 +100,7 @@ export function Sidebar(props: SideBarProps) {
         </>
       ) : (
         <>
-          <Link to="/topics/Esportivo" onClick={LinkReload}>
+          <Link to="/topics/Esportivo" onClick={props.CloseNavBar}>
             <Bicycle size={32} color="#C4C4CC" />
             <p>Esportes</p>
           </Link>
@@ -121,7 +115,7 @@ export function Sidebar(props: SideBarProps) {
         </>
       ) : (
         <>
-          <Link to="/topics/Saude" onClick={LinkReload} >
+          <Link to="/topics/Saude" onClick={props.CloseNavBar} >
             <FirstAid size={32} color="#C4C4CC" />
             <p>Saúde</p>
           </Link>
@@ -130,7 +124,5 @@ export function Sidebar(props: SideBarProps) {
     </Container>
   );
 }
-function preventDefault() {
-  throw new Error("Function not implemented.");
-}
+
 

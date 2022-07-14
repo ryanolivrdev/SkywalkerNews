@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { api } from "../../services/api";
 import { Container, TextField, SkeletonContainer } from "./styles";
-import Skeleton from "@mui/material/Skeleton";
 import Logo from "../../assets/logo.png";
+import { Loading } from "../Loading";
 
 interface apiResponseProps {
   image: any;
@@ -18,6 +18,7 @@ interface TopicProps {
 
 export function News(props: TopicProps) {
   const [news, setNews] = useState<apiResponseProps[]>();
+
   let slug: string;
   if (props.topicSlug.toLowerCase() === "principais notícias" || "") {
     slug = "";
@@ -35,25 +36,16 @@ export function News(props: TopicProps) {
         count: "20",
       },
     })
-    .then(({ data }) => setNews(data.value))
+    .then(({ data }) => setNews(data.value));
 
   return (
     <>
       {!news && (
-        <SkeletonContainer>
-          <Skeleton
-            sx={{ bgcolor: "white", opacity: 0.5 }}
-            variant="rectangular"
-            width={664}
-            height={176}
-          />
-          <Skeleton
-            sx={{ bgcolor: "white", opacity: 0.5 }}
-            variant="rectangular"
-            width={664}
-            height={176}
-          />
-        </SkeletonContainer>
+        <>
+          <Loading />
+          <Loading />
+          <Loading />
+        </>
       )}
 
       {news?.map((news) => {

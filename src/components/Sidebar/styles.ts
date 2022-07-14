@@ -8,6 +8,7 @@ export const Container = styled.aside<SideBarProps>`
   display: flex;
   flex-direction: column;
   position: fixed;
+  height: 100%;
   top: 72px;
   padding-top: 56px;
   align-items: center;
