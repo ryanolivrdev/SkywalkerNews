@@ -18,7 +18,7 @@ export function Navbar() {
     setIsOpen(false);
   }
 
-  const handleSubmit = (event: { preventDefault: () => void; }) => {
+  const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
 
     if (search !== "") {
@@ -48,7 +48,7 @@ export function Navbar() {
           />
         </form>
 
-        <button>
+        <button className="changeMode">
           <MoonStars size={40} color="white" />
         </button>
       </Container>

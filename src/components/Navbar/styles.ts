@@ -26,15 +26,18 @@ export const Container = styled.nav`
       font-size: 1.4rem;
       h1 {
         color: white;
+        @media (max-width: 700px) {
+          font-size: 0;
+        }
       }
       span {
         color: var(--logo-font);
       }
       @media (max-width: 1000px) {
-        font-size: 87.5%; // 14px
+        font-size: 87.5%;
       }
       @media (max-width: 900px) {
-        font-size: 0%; // 14px
+        margin-left: 1rem;
       }
     }
   }
@@ -62,7 +65,7 @@ export const Container = styled.nav`
     transition: all 0.2s ease-in;
 
     @media (max-width: 900px) {
-      margin-left: 0;
+      margin-left: 0rem;
     }
     @media (max-width: 600px) {
       width: 20rem;
@@ -85,5 +88,11 @@ export const Container = styled.nav`
   button {
     border: none;
     background-color: transparent;
+  }
+
+  .changeMode {
+    @media (max-width: 900px) {
+      margin-left: 1rem;
+    }
   }
 `;
