@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   padding-top: 130px;
 
-  div{
+  div {
     max-width: 100%;
   }
 `;
@@ -33,22 +33,29 @@ export const TextField = styled.div`
     span {
       color: var(--link-font);
     }
-    @media (max-width: 1000px) {
-      font-size: 87.5%; // 14px
-      width: 30rem;
-    }
-    @media (max-width: 600px) {
-      width: 25rem;
-    }
-    @media (max-width: 450px) {
-      width: 20rem;
-    }
-    @media (max-width: 290px) {
-      width: 10rem;
-    }
   }
 
   .Title {
     margin-top: 3.1rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 90%;
+    .alertBox {
+      margin: 2.1rem auto 0 auto;
+      max-width: 450px;
+    }
+  }
+  @media (max-width: 500px) {
+    font-size: 85%;
+    .alertBox {
+      max-width: 400px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 80%;
+  }
+  @media screen and (max-width: 417px) {
+    margin: 2.1rem 1.2rem 0 1.2rem;
   }
 `;
