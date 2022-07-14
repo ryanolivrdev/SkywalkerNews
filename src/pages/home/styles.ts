@@ -7,6 +7,10 @@ export const Container = styled.div`
   align-items: center;
 
   padding-top: 130px;
+
+  div{
+    max-width: 100%;
+  }
 `;
 
 export const TextField = styled.div`

@@ -1,11 +1,9 @@
-
 import { Container, TextField } from "./styles";
 import { format } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
 import { Navbar } from "../../components/Navbar";
 import { News } from "../../components/News";
 import { Link, useParams } from "react-router-dom";
-
 
 let hours: string;
 let getHours = format(new Date(), "aaa");
@@ -62,9 +60,10 @@ export function Home() {
           )}
 
           <h1 className="Title">{slug}</h1>
-
-          <News topicSlug={slug}/>
         </TextField>
+        <div>
+        <News topicSlug={slug} />
+        </div>
       </Container>
     </>
   );

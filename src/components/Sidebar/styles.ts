@@ -16,11 +16,11 @@ export const Container = styled.aside<SideBarProps>`
 
   gap: 1.688rem;
 
-  background-color: var(--background );
+  background-color: var(--background);
 
-  transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
 
   a {
     display: flex;
@@ -31,30 +31,32 @@ export const Container = styled.aside<SideBarProps>`
     gap: 1rem;
 
     border: none;
-    border-radius: 0 .625rem .625rem 0;
+    border-radius: 0 0.625rem 0.625rem 0;
 
     color: var(--text-font);
     background-color: transparent;
-    transition: all .2s  ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
     p {
       display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     }
   }
 
-  a:hover{
-    background-color: var(--button-hover);
+  a:hover {
     color: white;
+    background-color: var(--button-hover);
+    p {
+      color: white;
+    }
   }
 
-  .AtiveLink{
+  .AtiveLink {
     background-color: var(--button);
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
-  }
-  .Ative{
     color: white;
+    p {
+      color: white;
+    }
   }
-
-
-`
+`;
