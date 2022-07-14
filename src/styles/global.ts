@@ -58,7 +58,15 @@ export default createGlobalStyle`
   h1 {
     font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--title-font);
+    font-size: 1.6rem;
     font-weight: 700;
+  }
+
+  h2 {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--title-font);
+    font-size: 1rem;
+    font-weight: 400;
   }
 
   a {

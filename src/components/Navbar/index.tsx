@@ -23,11 +23,11 @@ export function Navbar() {
         <button onClick={changeSideBarState}>
           <Hamburger />
         </button>
-        <Link to="/">
+        <a href="/">
           <h1>
             Skywalker <span>News</span>
           </h1>
-        </Link>
+        </a>
       </div>
 
       <input placeholder="Pesquise assuntos, locais e fontes" type="text" />
