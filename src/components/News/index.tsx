@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import { Container, TextField } from "./styles";
 import Logo from "../../assets/logo.png";
 import { Loading } from "../Loading";
+import { sl } from "date-fns/locale";
 
 interface apiResponseProps {
   image: any;
@@ -16,7 +17,7 @@ interface TopicProps {
   topicSlug: string;
 }
 
-export function News(props: TopicProps) {
+export function News(this: any, props: TopicProps) {
   const [news, setNews] = useState<apiResponseProps[]>();
 
   let slug: string;
@@ -26,17 +27,19 @@ export function News(props: TopicProps) {
     slug = props.topicSlug;
   }
 
-  api
-    .get("/", {
-      params: {
-        textFormat: "Raw",
-        safeSearch: "Off",
-        q: `${slug}`,
-        freshness: "Day",
-        count: "20",
-      },
-    })
-    .then(({ data }) => setNews(data.value));
+  useEffect(() => {
+    api
+      .get("/", {
+        params: {
+          textFormat: "Raw",
+          safeSearch: "Off",
+          q: `${slug}`,
+          freshness: "Day",
+          count: "20",
+        },
+      })
+      .then(({ data }) => setNews(data.value));
+  }, [slug]);
 
   return (
     <>
