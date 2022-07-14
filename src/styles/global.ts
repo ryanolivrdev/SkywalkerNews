@@ -5,13 +5,9 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   }
-
-   /* Scrollbar on Firefox */
-  * {
     scrollbar-width: thin;
-    scrollbar-color: var(--text-font) var(--button);
-  }
+    scrollbar-color: var(--text-font) var(--elements-secondary);
+   }
 
   /* scrollbar on Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
@@ -19,12 +15,12 @@ export default createGlobalStyle`
     height: 10px;
   }
   *::-webkit-scrollbar-track {
-    background: var(--button);
+    background: var(--elements-secondary);
   }
   *::-webkit-scrollbar-thumb {
     background-color: var(--text-font);
     border-radius: 20px;
-    border: 3px solid var(--button);
+    border: 3px solid var(--elements-secondary);
   }
 
   :root {
@@ -46,7 +42,7 @@ export default createGlobalStyle`
       font-size: 93.75%; // 15px
     }
     @media (max-width: 720px) {
-        font-size: 87.5%; // 14px
+      font-size: 87.5%; // 14px
     }
   }
 
@@ -65,8 +61,8 @@ export default createGlobalStyle`
   h2 {
     font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--title-font);
-    font-size: 1rem;
-    font-weight: 400;
+    color: white;
+    font-weight: 700;
   }
 
   a {

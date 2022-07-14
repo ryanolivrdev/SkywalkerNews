@@ -1,21 +1,49 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.article`
   display: flex;
   justify-content: space-between;
 
-  background-color: var(--elements-secondary);
+  background-color: var(--elements);
+  border: 1px solid #5f6368;
   border-radius: 0.625rem;
-  padding-top: 0.6875rem;
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
-  padding-bottom: 0.6875rem;
-  margin-top: 2.2rem;
+  padding: 0.6875rem 1.3rem;
+
+  margin: 2.2rem 0 0 0;
 
   img {
-    width: 134px;
-    height: 154px;
-    border-radius: 10px;
+    max-width: 8.375rem;
+    height: 9.625rem;
+    border-radius: 0.625rem;
+  }
+  @media screen and (max-width: 600px) {
+    img {
+      height: auto;
+    }
+    min-height: 156px;
+  }
+  /* @media screen and (max-width: 540px) {
+    min-height: 104px;
+  }
+  @media (max-width: 375px) {
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+      width: 100%;
+    }
+    margin: 2.2rem 2rem 0 2rem;
+  } */
+  @media screen and (max-width: 500px) {
+    margin: 2.2rem 1.2rem 0 1.2rem;
+  }
+  @media screen and (max-width: 400px) {
+    gap: 1.2rem;
+  }
+  @media screen and (max-width: 334px) {
+    img{
+      width: 0;
+    }
   }
 `;
 
@@ -26,20 +54,33 @@ export const TextField = styled.div`
 
   h2 {
     max-width: 50ch;
+    font-size: 1rem;
   }
 
   a {
     color: var(--link-font);
     text-decoration: underline;
   }
+  @media screen and (max-width: 600px) {
+    h2 {
+      max-width: 40ch;
+      font-size: 90%;
+    }
+
+    a {
+      font-size: 87%;
+    }
+    p {
+      font-size: 90%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    h2 {
+      max-width: 35ch;
+      font-size: 85%;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    gap: 1rem;
+  }
 `;
-
-export const SkeletonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  margin-top: 1rem;
-  gap: 1.5rem;
-
-  max-width: 664px;
-`

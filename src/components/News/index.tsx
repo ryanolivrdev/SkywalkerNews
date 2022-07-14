@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { api } from "../../services/api";
-import { Container, TextField, SkeletonContainer } from "./styles";
+import { Container, TextField } from "./styles";
 import Logo from "../../assets/logo.png";
 import { Loading } from "../Loading";
 
