@@ -15,22 +15,22 @@ export function Sidebar(props: SideBarProps) {
 
   function LinkReload(){
     props.CloseNavBar();
-    preventDefault();
-    window.location.reload();
+    //preventDefault();
+    //window.location.reload();
   }
 
   return (
     <Container isOpen={props.isOpen}>
       {slug === "Principaisnoticias" || !slug ? (
         <>
-          <Link className="AtiveLink" to="/Principaisnoticias" onClick={props.CloseNavBar}>
+          <Link className="AtiveLink" to="/topics/Principaisnoticias" onClick={props.CloseNavBar}>
             <Globe size={32} color="white" />
             <p className="Ative">Principais Notícias</p>
           </Link>
         </>
       ) : (
         <>
-          <Link to="/Principaisnoticias" onClick={LinkReload}>
+          <Link to="/topics/Principaisnoticias" onClick={LinkReload}>
             <Globe size={32} color="#C4C4CC" />
             <p>Principais Notícias</p>
           </Link>

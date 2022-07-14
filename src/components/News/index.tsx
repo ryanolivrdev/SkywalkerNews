@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { api } from "../../services/api";
 import { Container, TextField, SkeletonContainer } from "./styles";
 import Skeleton from "@mui/material/Skeleton";
@@ -18,7 +18,6 @@ interface TopicProps {
 
 export function News(props: TopicProps) {
   const [news, setNews] = useState<apiResponseProps[]>();
-
   let slug: string;
   if (props.topicSlug.toLowerCase() === "principais notícias" || "") {
     slug = "";
@@ -26,20 +25,17 @@ export function News(props: TopicProps) {
     slug = props.topicSlug;
   }
 
-  useEffect(() => {
-    api
-      .get("/", {
-        params: {
-          textFormat: "Raw",
-          safeSearch: "Off",
-          q: `${slug}`,
-          freshness: "Day",
-          count: '20'
-        },
-      })
-      .then(({ data }) => setNews(data.value))
-      .catch((error) => console.error(error));
-  }, []);
+  api
+    .get("/", {
+      params: {
+        textFormat: "Raw",
+        safeSearch: "Off",
+        q: `${slug}`,
+        freshness: "Day",
+        count: "20",
+      },
+    })
+    .then(({ data }) => setNews(data.value))
 
   return (
     <>

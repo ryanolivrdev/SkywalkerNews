@@ -7,6 +7,6 @@ export const api = axios.create({
     'Accept-Language': 'pt',
     'X-RapidAPI-Key': import.meta.env.VITE_API_AUTH,
     'X-RapidAPI-Host': 'bing-news-search1.p.rapidapi.com'
-  }
+  },
 });
 
