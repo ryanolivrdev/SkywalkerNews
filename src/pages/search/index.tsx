@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Footer } from "../../components/Footer";
 import { Navbar } from "../../components/Navbar";
 import { News } from "../../components/News";
 import { Container, TextField } from "./styles";
@@ -19,9 +20,10 @@ export function Search() {
           <p>Para a pesquisa: {slug.replace(/-/g, " ")}</p>
         </TextField>
         <div>
-          <News topicSlug={slug} />
+          <News topicSlug={slug.replace(/\s+/g, "-")} />
         </div>
       </Container>
+      <Footer />
     </>
   );
 }

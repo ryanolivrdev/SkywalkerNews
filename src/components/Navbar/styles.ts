@@ -11,8 +11,7 @@ export const Container = styled.nav`
 
   align-items: center;
   justify-content: space-between;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 0 25px;
 
   background-color: var(--elements);
   border-bottom: 1px solid var(--divider);
@@ -20,7 +19,6 @@ export const Container = styled.nav`
   div {
     display: flex;
     align-items: center;
-
     gap: 1rem;
 
     a {

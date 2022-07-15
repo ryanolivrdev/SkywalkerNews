@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 import { Hamburger } from "./hamburguer";
-import { MoonStars } from "phosphor-react";
 import { Sidebar } from "../Sidebar";
+import { MoonStars } from "phosphor-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(true);

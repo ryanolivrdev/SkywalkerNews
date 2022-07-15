@@ -16,33 +16,22 @@ export const Container = styled.article`
     height: 9.625rem;
     border-radius: 0.625rem;
   }
+
   @media screen and (max-width: 600px) {
     img {
       height: auto;
     }
     min-height: 156px;
   }
-  /* @media screen and (max-width: 540px) {
-    min-height: 104px;
-  }
-  @media (max-width: 375px) {
-    flex-direction: column;
-    gap: 10px;
-
-    img {
-      width: 100%;
-    }
-    margin: 2.2rem 2rem 0 2rem;
-  } */
   @media screen and (max-width: 500px) {
     margin: 2.2rem 1.2rem 0 1.2rem;
-    gap: 1rem
+    gap: 1rem;
   }
   @media screen and (max-width: 400px) {
     gap: 1.2rem;
   }
   @media screen and (max-width: 334px) {
-    img{
+    img {
       width: 0;
     }
   }
@@ -75,6 +64,7 @@ export const TextField = styled.div`
       font-size: 90%;
     }
   }
+
   @media screen and (max-width: 500px) {
     h2 {
       max-width: 33ch;

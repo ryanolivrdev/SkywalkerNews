@@ -8,9 +8,9 @@ export const Container = styled.footer`
   align-items: center;
 
   padding: 2.2rem;
-  gap: .7rem;
+  gap: 0.7rem;
 
   a {
-    color: var(--text-secondary)
+    color: var(--text-secondary);
   }
 `;

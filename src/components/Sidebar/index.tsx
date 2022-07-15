@@ -1,3 +1,4 @@
+import { NavLink, useParams } from "react-router-dom";
 import { Container } from "./styles";
 import { Divider } from "./divider";
 import {
@@ -10,8 +11,6 @@ import {
   FirstAid,
   IconContext,
 } from "phosphor-react";
-import { Link, NavLink, useParams } from "react-router-dom";
-import { useState } from "react";
 
 interface SideBarProps {
   isOpen: boolean;

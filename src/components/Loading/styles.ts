@@ -10,7 +10,7 @@ export const Container = styled.div`
   padding: 0.6875rem 1.3rem;
 
   margin: 2.2rem 0 0 0;
-  gap: 1.2rem
+  gap: 1.2rem;
 `;
 
 export const TextField = styled.div`

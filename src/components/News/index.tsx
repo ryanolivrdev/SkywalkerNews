@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import { Container, TextField } from "./styles";
-import Logo from "../../assets/logo.png";
 import { Loading } from "../Loading";
+import Logo from "../../assets/logo.png";
 
 interface apiResponseProps {
   image: any;
@@ -19,26 +19,19 @@ interface TopicProps {
 export function News(this: any, props: TopicProps) {
   const [news, setNews] = useState<apiResponseProps[]>();
 
-  let slug: string;
-  if (props.topicSlug.toLowerCase() === "principais notícias" || "") {
-    slug = "";
-  } else {
-    slug = props.topicSlug;
-  }
-
   useEffect(() => {
     api
       .get("/", {
         params: {
           textFormat: "Raw",
           safeSearch: "Off",
-          q: `${slug}`,
+          q: `${props.topicSlug}`,
           freshness: "Day",
           count: "20",
         },
       })
       .then(({ data }) => setNews(data.value));
-  }, [slug]);
+  }, [props.topicSlug]);
 
   return (
     <>
