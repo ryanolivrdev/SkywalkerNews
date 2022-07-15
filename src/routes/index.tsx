@@ -7,7 +7,7 @@ export function Router() {
     <Routes>
       <Route
         path="/"
-        element={<Navigate to="/topics/Principaisnoticias" replace />}
+        element={<Home />}
       />
       <Route path="/topics/:slug" element={<Home />} />
       <Route path="/search/:slug" element={<Search />} />
