@@ -1,9 +1,11 @@
 # Skywalker News :newspaper:
 
+O projeto se consiste em um site de noticias, usei a Api [`Bing News Search`](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api) para prover as informações mais recente e pesquisas.
+
 A “arte” do jornalismo é escolher os assuntos que mais interessam ao público e apresentá-los de modo atraente.
 - Luiz Santana de Freitas, 2010
 
-[Design Figma](https://www.figma.com/)
+[Design Figma](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api)
 
 ## Technologies Used :computer:
 <code><img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" title = "Figma"/></code>
