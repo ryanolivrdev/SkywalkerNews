@@ -17,7 +17,7 @@ if (getHours >= 12 && getHours <= 17) {
 if (getHours >= 17 && getHours <= 24) {
   greeting = "Boa Noite!";
 }
-const today = format(new Date(), "d 'de' MMMM',' eeee", { locale: ptBR });
+const today = format(new Date(), "d 'de' MMMM',' eeee'.'", { locale: ptBR });
 
 export function Home() {
   let { slug } = useParams<{ slug: string }>();
