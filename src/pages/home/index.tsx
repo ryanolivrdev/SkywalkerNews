@@ -4,6 +4,7 @@ import ptBR from "date-fns/locale/pt-BR";
 import { Navbar } from "../../components/Navbar";
 import { News } from "../../components/News";
 import { Link, useParams } from "react-router-dom";
+import { Footer } from "../../components/Footer";
 
 let greeting: string;
 const getHours = new Date().getHours();
@@ -71,6 +72,7 @@ export function Home() {
           <News topicSlug={slug.replace(/\s+/g, "-")} />
         </div>
       </Container>
+      <Footer /> 
     </>
   );
 }
