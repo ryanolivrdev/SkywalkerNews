@@ -54,7 +54,7 @@ export function Navbar() {
           {theme.title === "dark" ? (
             <MoonStars size={40} color="white" />
           ) : (
-            <Sun size={40} color="black" />
+            <Sun size={40} color="white" />
           )}
         </button>
       </Container>

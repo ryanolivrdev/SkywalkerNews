@@ -12,6 +12,7 @@ declare module "styled-components" {
 
       titleFont: string;
       textFont: string;
+      inputFont: string;
       textSecondary: string;
       linkFont: string;
       linkSecondary: string;
@@ -20,9 +21,11 @@ declare module "styled-components" {
       elementsSecondary: string;
       newsBorder: string;
       divider: string;
+      navbarColor: string,
       button: string;
       buttonHover: string;
       inputHover: string;
+      inputBorder: string,
       SkeletonColor: string;
     };
   }

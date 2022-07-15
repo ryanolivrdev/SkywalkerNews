@@ -13,7 +13,7 @@ export const Container = styled.nav`
   justify-content: space-between;
   padding: 0 25px;
 
-  background-color: var(--elements);
+  background-color: var(--navbarColor);
   border-bottom: 1px solid var(--divider);
 
   div {
@@ -47,6 +47,7 @@ export const Container = styled.nav`
 
   input {
     display: flex;
+    overflow-x: scroll;
     background-image: ${(props) =>
       props.theme.title === "dark"
         ? `url("${MagnifyingGlass}")`
@@ -54,14 +55,14 @@ export const Container = styled.nav`
     background-repeat: no-repeat;
     background-position: 0.75rem;
     background-color: var(--divider);
-    color: var(--title-font);
+    color: var(--inputFont);
     padding-left: 2.875rem;
     margin-left: -10rem;
 
     width: 30rem;
     height: 3rem;
 
-    border: 1px solid var(--elements-secondary);
+    border: 1px solid var(--inputBorder);
     border-radius: 10px;
 
     transition: all 0.2s ease-in;

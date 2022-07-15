@@ -10,10 +10,6 @@ export default createGlobalStyle`
    }
 
   /* scrollbar on Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 12px;
-    height: 10px;
-  }
   *::-webkit-scrollbar-track {
     background: var(--elements-secondary);
   }
@@ -28,6 +24,7 @@ export default createGlobalStyle`
     --logo-secondary: ${props => props.theme.colors.logoSecondary};
     --title-font: ${props => props.theme.colors.titleFont};
     --text-font: ${props => props.theme.colors.textFont};
+    --inputFont: ${props => props.theme.colors.inputFont};
     --text-secondary: ${props => props.theme.colors.textSecondary};
     --link-font: ${props => props.theme.colors.linkFont};
     --link-secondary: ${props => props.theme.colors.linkSecondary};
@@ -36,9 +33,11 @@ export default createGlobalStyle`
     --elements-secondary: ${props => props.theme.colors.elementsSecondary};
     --news-border: ${props => props.theme.colors.newsBorder};
     --divider: ${props => props.theme.colors.divider};
+    --navbarColor: ${props => props.theme.colors.navbarColor};
     --button: ${props => props.theme.colors.button};
     --button-hover: ${props => props.theme.colors.buttonHover};
     --input-hover: ${props => props.theme.colors.inputHover};
+    --inputBorder: ${props => props.theme.colors.inputBorder};
   }
 
   html {

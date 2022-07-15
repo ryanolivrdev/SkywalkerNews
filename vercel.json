@@ -1,16 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "routes": [
-    { "src": "/[^.]+", "dest": "/", "status": 200 },
-    { "src": "/", "dest": "/" },
-    { "src": "/topics", "dest": "/" },
-    { "src": "/topics/principaisnoticias", "dest": "/" },
-    { "src": "/topics/covid-19", "dest": "/" },
-    { "src": "/topics/entretenimento", "dest": "/" },
-    { "src": "/topics/tecnologia", "dest": "/" },
-    { "src": "/topics/economia", "dest": "/" },
-    { "src": "/topics/esportivo", "dest": "/" },
-    { "src": "/topics/saude", "dest": "/" },
-    { "src": "/topics/search", "dest": "/" }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }

@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const Container = styled.footer`
   display: flex;
-  width: 100vw;
 
   justify-content: center;
   align-items: center;
 
-  padding: 2.2rem;
+  padding: 3rem 0 1.5rem;
   gap: 0.7rem;
 
   a {
@@ -23,8 +22,6 @@ export const Container = styled.footer`
     p {
       width: 12ch;
     }
-    /* padding-top: 2.2rem;
-    font-size: 80%; */
   }
 `;
-//13
+
