@@ -8,6 +8,7 @@ export default {
 
     titleFont: "#202124",
     textFont: "#5F6368",
+    strong: "##0a0a0a",
     inputFont: "#C4C4CC",
     textSecondary: "#5F6368",
     linkFont: "#1A73E8",

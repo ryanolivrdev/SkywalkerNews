@@ -8,6 +8,7 @@ export default {
     logoSecondary: "#FFFFFF",
 
     titleFont: "#E1E1E6",
+    strong: "#FFFFFF",
     textFont: "#C4C4CC",
     inputFont: "#C4C4CC",
     textSecondary: "#8D8D99",

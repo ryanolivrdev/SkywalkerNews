@@ -12,6 +12,7 @@ declare module "styled-components" {
 
       titleFont: string;
       textFont: string;
+      strong: string,
       inputFont: string;
       textSecondary: string;
       linkFont: string;

@@ -38,6 +38,7 @@ export default createGlobalStyle`
     --button-hover: ${props => props.theme.colors.buttonHover};
     --input-hover: ${props => props.theme.colors.inputHover};
     --inputBorder: ${props => props.theme.colors.inputBorder};
+    --strong: ${props => props.theme.colors.strong};
   }
 
   html {
@@ -63,8 +64,7 @@ export default createGlobalStyle`
 
   h2 {
     font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--title-font);
-    color: white;
+    color: var(--strong);
     font-weight: 700;
   }
 
