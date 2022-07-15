@@ -69,7 +69,7 @@ export function Home() {
           </h1>
         </TextField>
         <div>
-          <News topicSlug={slug.replace(/\s+/g, "-")} />
+          <News topicSlug={slug.replace(/\s+/g, "-").toLowerCase()} />
         </div>
       </Container>
       <Footer />

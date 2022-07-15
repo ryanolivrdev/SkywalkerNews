@@ -20,7 +20,7 @@ export function Search() {
           <p>Para a pesquisa: {slug.replace(/-/g, " ")}</p>
         </TextField>
         <div>
-          <News topicSlug={slug.replace(/\s+/g, "-")} />
+          <News topicSlug={slug.replace(/\s+/g, "-").toLowerCase()} />
         </div>
       </Container>
       <Footer />

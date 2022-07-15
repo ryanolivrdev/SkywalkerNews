@@ -13,7 +13,7 @@ export function Router() {
       <Route path="/search/:slug" element={<Search />} />
       <Route
         path="*"
-        element={<Navigate to="/topics/Principaisnoticias" replace />}
+        element={<Navigate to="/" replace />}
       />
     </Routes>
   );
