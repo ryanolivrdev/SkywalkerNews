@@ -32,7 +32,7 @@ export function Sidebar(props: SideBarProps) {
         }}
       >
         <NavLink
-          to="/topics/Principaisnoticias"
+          to="/topics/principaisnoticias"
           className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
           onClick={props.CloseNavBar}
         >
@@ -40,7 +40,7 @@ export function Sidebar(props: SideBarProps) {
           <p>Principais Notícias</p>
         </NavLink>
         <NavLink
-          to="/topics/Covid-19"
+          to="/topics/covid-19"
           className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
           onClick={props.CloseNavBar}
         >
@@ -49,7 +49,7 @@ export function Sidebar(props: SideBarProps) {
         </NavLink>
         {props.isOpen ? <Divider /> : ""}
         <NavLink
-          to="/topics/Entretenimento"
+          to="/topics/entretenimento"
           className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
           onClick={props.CloseNavBar}
         >
@@ -57,7 +57,7 @@ export function Sidebar(props: SideBarProps) {
           <p>Entretenimento</p>
         </NavLink>
         <NavLink
-          to="/topics/Tecnologia"
+          to="/topics/tecnologia"
           className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
           onClick={props.CloseNavBar}
         >
@@ -65,7 +65,7 @@ export function Sidebar(props: SideBarProps) {
           <p>Tecnologia</p>
         </NavLink>
         <NavLink
-          to="/topics/Economia"
+          to="/topics/economia"
           className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
           onClick={props.CloseNavBar}
         >
@@ -73,7 +73,7 @@ export function Sidebar(props: SideBarProps) {
           <p>Economia</p>
         </NavLink>
         <NavLink
-          to="/topics/Esportivo"
+          to="/topics/esportivo"
           className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
           onClick={props.CloseNavBar}
         >
@@ -81,7 +81,7 @@ export function Sidebar(props: SideBarProps) {
           <p>Esportes</p>
         </NavLink>
         <NavLink
-          to="/topics/Saude"
+          to="/topics/saude"
           className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
           onClick={props.CloseNavBar}
         >
