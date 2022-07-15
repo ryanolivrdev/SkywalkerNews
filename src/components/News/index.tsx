@@ -16,7 +16,7 @@ interface TopicProps {
   topicSlug: string;
 }
 
-export function News(this: any, props: TopicProps) {
+export function News(props: TopicProps) {
   const [news, setNews] = useState<apiResponseProps[]>();
 
   useEffect(() => {

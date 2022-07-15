@@ -44,19 +44,19 @@ export const Container = styled.aside<SideBarProps>`
   }
 
   a:hover {
-    color: white;
+    color: var(--link-secondary);
     background-color: var(--button-hover);
     p {
-      color: white;
+      color: var(--link-secondary);
     }
   }
 
   .AtiveLink {
     background-color: var(--button);
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
-    color: white;
+    color: var(--link-secondary);
     p {
-      color: white;
+      color: var(--link-secondary);
     }
   }
 `;

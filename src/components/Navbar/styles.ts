@@ -24,7 +24,7 @@ export const Container = styled.nav`
     a {
       font-size: 1.4rem;
       h1 {
-        color: white;
+        color: var(--logo-secondary);
         @media (max-width: 700px) {
           font-size: 0;
         }
@@ -47,7 +47,10 @@ export const Container = styled.nav`
 
   input {
     display: flex;
-    background-image: url(${MagnifyingGlass});
+    background-image: ${(props) =>
+      props.theme.title === "dark"
+        ? `url("${MagnifyingGlass}")`
+        : `url("${MagnifyingGlass}")`};
     background-repeat: no-repeat;
     background-position: 0.75rem;
     background-color: var(--divider);
@@ -81,7 +84,7 @@ export const Container = styled.nav`
   }
   input:hover {
     background-color: var(--text-font);
-    color: black;
+    color: var(--input-hover);
   }
 
   button {

@@ -1,7 +1,12 @@
 import { Container, TextField } from "./styles";
 import Skeleton from "@mui/material/Skeleton";
+import { useContext } from "react";
+import ThemeContext from "../../styles/themes/context";
 
 export function Loading() {
+  const { theme } = useContext(ThemeContext);
+  let colors = theme.colors.SkeletonColor;
+
   return (
     <Container>
       <TextField>
@@ -10,7 +15,7 @@ export function Loading() {
             animation="wave"
             height={30}
             width={100}
-            sx={{ bgcolor: "grey.900" }}
+            sx={{ bgcolor: { colors } }}
           />
         </p>
         <h2>
@@ -18,7 +23,7 @@ export function Loading() {
             animation="wave"
             height={80}
             width={300}
-            sx={{ bgcolor: "grey.900" }}
+            sx={{ bgcolor: { colors } }}
           />
         </h2>
         <a>
@@ -26,7 +31,7 @@ export function Loading() {
             animation="wave"
             height={30}
             width={100}
-            sx={{ bgcolor: "grey.900" }}
+            sx={{ bgcolor: { colors } }}
           />
         </a>
         <div>
@@ -35,7 +40,7 @@ export function Loading() {
               animation="wave"
               height={25}
               width={65}
-              sx={{ bgcolor: "grey.900" }}
+              sx={{ bgcolor: { colors } }}
             />
           </p>
         </div>
@@ -45,7 +50,7 @@ export function Loading() {
         variant="rectangular"
         width={134}
         height={165}
-        sx={{ bgcolor: "grey.900" }}
+        sx={{ bgcolor: { colors } }}
       />
     </Container>
   );

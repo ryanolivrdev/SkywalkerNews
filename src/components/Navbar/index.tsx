@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 import { Hamburger } from "./hamburguer";
 import { Sidebar } from "../Sidebar";
-import { MoonStars } from "phosphor-react";
+import { MoonStars, Sun } from "phosphor-react";
+import ThemeContext from "../../styles/themes/context";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
-  const [search, setSearch] = useState("");
-  const [width, setWidth] = useState(window.innerWidth);
   const navigate = useNavigate();
+  const { theme, toggledTheme } = useContext(ThemeContext);
+  const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState("");
 
   function changeSideBarState() {
     setIsOpen((curr) => !curr);
@@ -26,13 +27,6 @@ export function Navbar() {
       navigate(`/search/${search.replace(/\s+/g, "-")}`);
     }
   };
-
-  useEffect(() => {
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-    if (width <= 1172) {
-      setIsOpen(false);
-    }
-  }, []);
 
   return (
     <>
@@ -56,8 +50,12 @@ export function Navbar() {
           />
         </form>
 
-        <button className="changeMode">
-          <MoonStars size={40} color="white" />
+        <button className="changeMode" onClick={toggledTheme}>
+          {theme.title === "dark" ? (
+            <MoonStars size={40} color="white" />
+          ) : (
+            <Sun size={40} color="black" />
+          )}
         </button>
       </Container>
       <Sidebar isOpen={isOpen} CloseNavBar={closeNavBar} />

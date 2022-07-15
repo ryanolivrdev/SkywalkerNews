@@ -24,17 +24,21 @@ export default createGlobalStyle`
   }
 
   :root {
-    --logo-font: #FBA94C;
-    --title-font: #E1E1E6;
-    --text-font: #C4C4CC;
-    --text-secondary: #8D8D99;
-    --link-font: #81D8F7;
-    --background: #09090A;
-    --elements: #121214;
-    --elements-secondary: #29292E;
-    --divider: #323238;
-    --button: #00875F;
-    --button-hover: #015F43;
+    --logo-font: ${props => props.theme.colors.logoFont};
+    --logo-secondary: ${props => props.theme.colors.logoSecondary};
+    --title-font: ${props => props.theme.colors.titleFont};
+    --text-font: ${props => props.theme.colors.textFont};
+    --text-secondary: ${props => props.theme.colors.textSecondary};
+    --link-font: ${props => props.theme.colors.linkFont};
+    --link-secondary: ${props => props.theme.colors.linkSecondary};
+    --background: ${props => props.theme.colors.background};
+    --elements: ${props => props.theme.colors.elements};
+    --elements-secondary: ${props => props.theme.colors.elementsSecondary};
+    --news-border: ${props => props.theme.colors.newsBorder};
+    --divider: ${props => props.theme.colors.divider};
+    --button: ${props => props.theme.colors.button};
+    --button-hover: ${props => props.theme.colors.buttonHover};
+    --input-hover: ${props => props.theme.colors.inputHover};
   }
 
   html {
@@ -47,7 +51,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: #09090A;
+    background-color: ${props => props.theme.colors.backgroundBody};
     -webkit-font-smoothing: antialiased;
   }
 
