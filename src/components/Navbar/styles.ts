@@ -47,11 +47,8 @@ export const Container = styled.nav`
 
   input {
     display: flex;
-    overflow-x: scroll;
-    background-image: ${(props) =>
-      props.theme.title === "dark"
-        ? `url("${MagnifyingGlass}")`
-        : `url("${MagnifyingGlass}")`};
+    background-image: url(${MagnifyingGlass});
+
     background-repeat: no-repeat;
     background-position: 0.75rem;
     background-color: var(--divider);
