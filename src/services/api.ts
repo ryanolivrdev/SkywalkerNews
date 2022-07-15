@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "dffddhttps://bing-news-search1.p.rapidapi.com/news/search",
+  baseURL: "https://bing-news-search1.p.rapidapi.com/news/search",
   headers: {
     "X-BingApis-SDK": "true",
     "Accept-Language": "pt",

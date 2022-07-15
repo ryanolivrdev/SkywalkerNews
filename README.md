@@ -1,6 +1,6 @@
 # Skywalker News :newspaper:
 
-O projeto se consiste em um site de noticias, usei a Api [`Bing News Search`](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api) para prover as informações mais recente e pesquisas ele pode ser acessado facilmente por [skywalker-news.vercel.app](skywalker-news.vercel.app).
+O projeto se consiste em um site de noticias, usei a Api [`Bing News Search`](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api) para prover as informações mais recente e pesquisas ele pode ser acessado facilmente por [skywalker-news.ryanolivr.dev](skywalker-news.ryanolivr.dev).
 
 A “arte” do jornalismo é escolher os assuntos que mais interessam ao público e apresentá-los de modo atraente.
 - Luiz Santana de Freitas, 2010
