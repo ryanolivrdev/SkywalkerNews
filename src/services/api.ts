@@ -3,10 +3,9 @@ import axios from "axios";
 export const api = axios.create({
   baseURL: "https://bing-news-search1.p.rapidapi.com/news/search",
   headers: {
-    'X-BingApis-SDK': 'true',
-    'Accept-Language': 'pt',
-    'X-RapidAPI-Key': import.meta.env.VITE_API_AUTH,
-    'X-RapidAPI-Host': 'bing-news-search1.p.rapidapi.com'
+    "X-BingApis-SDK": "true",
+    "Accept-Language": "pt",
+    "X-RapidAPI-Key": import.meta.env.VITE_API_AUTH,
+    "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
   },
 });
-

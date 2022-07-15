@@ -5,13 +5,11 @@ import GlobalStyle from "./styles/global";
 
 import { ThemeProvider, DefaultTheme } from "styled-components";
 import { dark, light } from "./styles/themes/index";
-import ThemeContext from "./styles/themes/context"
+import ThemeContext from "./styles/themes/context";
 import { usePersistedState } from "./utils/usePersistentState";
 
-
-
 export function App() {
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', dark);
+  const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", dark);
 
   const toggledTheme = () => {
     setTheme(theme.title === "dark" ? light : dark);
@@ -24,7 +22,7 @@ export function App() {
           <Router />
           <GlobalStyle />
         </ThemeProvider>
-        </ThemeContext.Provider>
+      </ThemeContext.Provider>
     </BrowserRouter>
   );
 }

@@ -18,10 +18,6 @@ interface SideBarProps {
 }
 
 export function Sidebar(props: SideBarProps) {
-  let { slug } = useParams<{ slug: string }>();
-
-  slug = slug?.toLowerCase();
-
   return (
     <Container isOpen={props.isOpen}>
       <IconContext.Provider

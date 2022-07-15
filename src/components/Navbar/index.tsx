@@ -35,7 +35,7 @@ export function Navbar() {
           <button onClick={changeSideBarState}>
             <Hamburger />
           </button>
-          <Link to="/topics/Principaisnoticias">
+          <Link to="/topics/principaisnoticias">
             <h1>
               Skywalker <span>News</span>
             </h1>
