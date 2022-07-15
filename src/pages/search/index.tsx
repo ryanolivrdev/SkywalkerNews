@@ -6,22 +6,20 @@ import { Container, TextField } from "./styles";
 export function Search() {
   const { slug } = useParams<{ slug: string }>();
 
-  if(!slug) {
-    return <div>Error</div>
+  if (!slug) {
+    return <div>Error</div>;
   }
 
-  console.log(slug);
   return (
     <>
       <Navbar />
       <Container>
         <TextField>
           <h1>Resultado</h1>
-          <p>Para a pesquisa: {slug}</p>
+          <p>Para a pesquisa: {slug.replace(/-/g, " ")}</p>
         </TextField>
         <div>
-        <News topicSlug={slug}/>
-
+          <News topicSlug={slug} />
         </div>
       </Container>
     </>

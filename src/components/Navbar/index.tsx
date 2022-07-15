@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 import { Hamburger } from "./hamburguer";
@@ -8,6 +8,7 @@ import { Sidebar } from "../Sidebar";
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(true);
   const [search, setSearch] = useState("");
+  const [width, setWidth] = useState(window.innerWidth);
   const navigate = useNavigate();
 
   function changeSideBarState() {
@@ -26,6 +27,13 @@ export function Navbar() {
     }
   };
 
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+    if (width <= 1172) {
+      setIsOpen(false);
+    }
+  }, []);
+
   return (
     <>
       <Container>
@@ -33,7 +41,7 @@ export function Navbar() {
           <button onClick={changeSideBarState}>
             <Hamburger />
           </button>
-          <Link to="/">
+          <Link to="/topics/Principaisnoticias">
             <h1>
               Skywalker <span>News</span>
             </h1>

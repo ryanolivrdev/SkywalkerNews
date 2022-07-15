@@ -11,6 +11,12 @@ export const Container = styled.div`
   div {
     max-width: 100%;
   }
+  @media (max-width: 446px) {
+    padding-top: 110px
+  }
+  @media (max-width: 416px) {
+    padding-top: 80px
+  }
 `;
 
 export const TextField = styled.div`

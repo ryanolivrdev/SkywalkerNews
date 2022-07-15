@@ -5,16 +5,18 @@ import { Navbar } from "../../components/Navbar";
 import { News } from "../../components/News";
 import { Link, useParams } from "react-router-dom";
 
-let hours: string;
-let getHours = format(new Date(), "aaa");
-if (getHours === "am") {
-  hours = "Bom dia!";
+let greeting: string;
+const getHours = new Date().getHours();
+if (getHours < 12) {
+  greeting = "Bom dia!";
 }
-if (getHours === "pm") {
-  hours = "Boa Noite!";
+if (getHours >= 12 && getHours <= 17) {
+  greeting = "Boa Tarde!";
 }
-
-let today = format(new Date(), "eeee',' d 'de' MMMM aaa", { locale: ptBR });
+if (getHours >= 17 && getHours <= 24) {
+  greeting = "Boa Noite!";
+}
+const today = format(new Date(), "d 'de' MMMM',' eeee", { locale: ptBR });
 
 export function Home() {
   let { slug } = useParams<{ slug: string }>();
@@ -37,7 +39,7 @@ export function Home() {
       <Container>
         <TextField>
           <div>
-            <h1>{hours}</h1>
+            <h1>{greeting}</h1>
             <p>{today}</p>
           </div>
 
@@ -59,10 +61,14 @@ export function Home() {
             </>
           )}
 
-          <h1 className="Title">{slug}</h1>
+          <h1 className="Title">
+            {slug.replace(/(^\w{1})|(\s+\w{1})/g, (letra) =>
+              letra.toUpperCase()
+            )}
+          </h1>
         </TextField>
         <div>
-        <News topicSlug={slug} />
+          <News topicSlug={slug.replace(/\s+/g, "-")} />
         </div>
       </Container>
     </>

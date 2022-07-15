@@ -3,7 +3,6 @@ import { api } from "../../services/api";
 import { Container, TextField } from "./styles";
 import Logo from "../../assets/logo.png";
 import { Loading } from "../Loading";
-import { sl } from "date-fns/locale";
 
 interface apiResponseProps {
   image: any;
@@ -77,15 +76,3 @@ export function News(this: any, props: TopicProps) {
     </>
   );
 }
-
-<Container>
-  <TextField>
-    <p>Globo</p>
-    <h2>Nasa divulga novas imagens obtidas pelo telescópio James Webb</h2>
-    <a href="">Saiba Mais</a>
-    <div>
-      <p>12:55</p>
-    </div>
-  </TextField>
-  <img src="https://picsum.photos/200" alt="" />
-</Container>;

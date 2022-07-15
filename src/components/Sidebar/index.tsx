@@ -10,7 +10,7 @@ import {
   FirstAid,
   IconContext,
 } from "phosphor-react";
-import { Link, useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import { useState } from "react";
 
 interface SideBarProps {
@@ -32,140 +32,63 @@ export function Sidebar(props: SideBarProps) {
           mirrored: false,
         }}
       >
-        {slug === "principaisnoticias" || !slug ? (
-          <>
-            <Link
-              className="AtiveLink"
-              to="/topics/Principaisnoticias"
-              onClick={props.CloseNavBar}
-            >
-              <Globe />
-              <p>Principais Notícias</p>
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/topics/Principaisnoticias" onClick={props.CloseNavBar}>
-              <Globe />
-              <p>Principais Notícias</p>
-            </Link>
-          </>
-        )}
-        {slug === "covid-19" ? (
-          <>
-            <Link
-              className="AtiveLink"
-              to="/topics/Covid-19"
-              onClick={props.CloseNavBar}
-            >
-              <ShieldPlus />
-              <p>Covid-19</p>
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/topics/Covid-19" onClick={props.CloseNavBar}>
-              <ShieldPlus />
-              <p>Covid-19</p>
-            </Link>
-          </>
-        )}
+        <NavLink
+          to="/topics/Principaisnoticias"
+          className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
+          onClick={props.CloseNavBar}
+        >
+          <Globe />
+          <p>Principais Notícias</p>
+        </NavLink>
+        <NavLink
+          to="/topics/Covid-19"
+          className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
+          onClick={props.CloseNavBar}
+        >
+          <ShieldPlus />
+          <p>Covid-19</p>
+        </NavLink>
         {props.isOpen ? <Divider /> : ""}
-        {slug === "entretenimento" ? (
-          <>
-            <Link
-              className="AtiveLink"
-              to="/topics/Entretenimento"
-              onClick={props.CloseNavBar}
-            >
-              <FilmStrip />
-              <p>Entretenimento</p>
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/topics/Entretenimento" onClick={props.CloseNavBar}>
-              <FilmStrip />
-              <p>Entretenimento</p>
-            </Link>
-          </>
-        )}
-        {slug === "tecnologia" ? (
-          <>
-            <Link
-              className="AtiveLink"
-              to="/topics/Tecnologia"
-              onClick={props.CloseNavBar}
-            >
-              <RocketLaunch />
-              <p>Tecnologia</p>
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/topics/Tecnologia" onClick={props.CloseNavBar}>
-              <RocketLaunch />
-              <p>Tecnologia</p>
-            </Link>
-          </>
-        )}
-        {slug === "economia" ? (
-          <>
-            <Link
-              className="AtiveLink"
-              to="/topics/Economia"
-              onClick={props.CloseNavBar}
-            >
-              <Briefcase />
-              <p>Economia</p>
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/topics/Economia" onClick={props.CloseNavBar}>
-              <Briefcase />
-              <p>Economia</p>
-            </Link>
-          </>
-        )}
-        {slug === "esportivo" ? (
-          <>
-            <Link
-              className="AtiveLink"
-              to="/topics/Esportivo"
-              onClick={props.CloseNavBar}
-            >
-              <Bicycle />
-              <p className="Ative">Esportes</p>
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/topics/Esportivo" onClick={props.CloseNavBar}>
-              <Bicycle />
-              <p>Esportes</p>
-            </Link>
-          </>
-        )}
-        {slug === "saude" ? (
-          <>
-            <Link
-              className="AtiveLink"
-              to="/topics/Saude"
-              onClick={props.CloseNavBar}
-            >
-              <FirstAid />
-              <p className="Ative">Saúde</p>
-            </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/topics/Saude" onClick={props.CloseNavBar}>
-              <FirstAid />
-              <p>Saúde</p>
-            </Link>
-          </>
-        )}
+        <NavLink
+          to="/topics/Entretenimento"
+          className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
+          onClick={props.CloseNavBar}
+        >
+          <FilmStrip />
+          <p>Entretenimento</p>
+        </NavLink>
+        <NavLink
+          to="/topics/Tecnologia"
+          className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
+          onClick={props.CloseNavBar}
+        >
+          <RocketLaunch />
+          <p>Tecnologia</p>
+        </NavLink>
+        <NavLink
+          to="/topics/Economia"
+          className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
+          onClick={props.CloseNavBar}
+        >
+          <Briefcase />
+          <p>Economia</p>
+        </NavLink>
+        <NavLink
+          to="/topics/Esportivo"
+          className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
+          onClick={props.CloseNavBar}
+        >
+          <Bicycle />
+          <p>Esportes</p>
+        </NavLink>
+        <NavLink
+          to="/topics/Saude"
+          className={({ isActive }) => (isActive ? "AtiveLink" : undefined)}
+          onClick={props.CloseNavBar}
+        >
+          <FirstAid />
+          <p>Saúde</p>
+        </NavLink>
       </IconContext.Provider>
     </Container>
   );

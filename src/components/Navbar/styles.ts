@@ -7,6 +7,7 @@ export const Container = styled.nav`
 
   width: 100vw;
   height: 72px;
+  top: 0;
 
   align-items: center;
   justify-content: space-between;

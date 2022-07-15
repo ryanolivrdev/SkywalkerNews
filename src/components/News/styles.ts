@@ -36,6 +36,7 @@ export const Container = styled.article`
   } */
   @media screen and (max-width: 500px) {
     margin: 2.2rem 1.2rem 0 1.2rem;
+    gap: 1rem
   }
   @media screen and (max-width: 400px) {
     gap: 1.2rem;
@@ -76,7 +77,7 @@ export const TextField = styled.div`
   }
   @media screen and (max-width: 500px) {
     h2 {
-      max-width: 35ch;
+      max-width: 33ch;
       font-size: 85%;
     }
   }
