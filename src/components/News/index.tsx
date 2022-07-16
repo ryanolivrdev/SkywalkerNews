@@ -42,7 +42,7 @@ export function News(props: TopicProps) {
                 <p>
                   <address>{news.provider[0].name}</address>
                 </p>
-                <a href={news.url} className="title">
+                <a href={news.url} className="title" target="_blank">
                   <h2>{news.name}</h2>
                 </a>
                 <a href={news.url} target="_blank">

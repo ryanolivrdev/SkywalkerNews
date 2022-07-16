@@ -18,7 +18,8 @@ export const Container = styled.aside<SideBarProps>`
 
   width: ${({ isOpen }) => (isOpen ? "252px" : "0")};
 
-  border-right: 1px solid var(--navbarBorderColor);
+  border-right: ${({ isOpen }) =>
+    isOpen ? "1px solid var(--navbarBorderColor)" : "none"};
   background-color: var(--backgroundBody);
 
   a {
