@@ -47,6 +47,7 @@ export const TextField = styled.div`
 
   @media (max-width: 600px) {
     font-size: 90%;
+
     .alertBox {
       margin: 2.1rem auto 0 auto;
       max-width: 450px;
@@ -54,6 +55,7 @@ export const TextField = styled.div`
   }
   @media (max-width: 500px) {
     font-size: 85%;
+
     .alertBox {
       max-width: 400px;
     }

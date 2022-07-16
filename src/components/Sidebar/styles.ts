@@ -38,6 +38,7 @@ export const Container = styled.aside<SideBarProps>`
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
+
     p {
       display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     }
@@ -46,6 +47,7 @@ export const Container = styled.aside<SideBarProps>`
   a:hover {
     color: var(--link-secondary);
     background-color: var(--button-hover);
+
     p {
       color: var(--link-secondary);
     }
@@ -55,9 +57,9 @@ export const Container = styled.aside<SideBarProps>`
     background-color: var(--button);
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     color: var(--link-secondary);
+
     p {
       color: var(--link-secondary);
     }
   }
 `;
-

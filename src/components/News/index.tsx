@@ -1,23 +1,12 @@
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
+import { NewsReponse, TopicProps } from "../../@types";
 import { Container, TextField } from "./styles";
 import { Loading } from "../Loading";
 import Logo from "../../assets/logo.png";
 
-interface apiResponseProps {
-  image: any;
-  url: string | undefined;
-  provider: any;
-  name: string;
-  datePublished: string;
-}
-
-interface TopicProps {
-  topicSlug: string;
-}
-
 export function News(props: TopicProps) {
-  const [news, setNews] = useState<apiResponseProps[]>();
+  const [news, setNews] = useState<NewsReponse[]>();
 
   useEffect(() => {
     api
@@ -43,29 +32,32 @@ export function News(props: TopicProps) {
         </>
       )}
 
-      {news?.map((news) => {
-        setTimeout(() => {}, 1000);
+      {news &&
+        news.map((news: NewsReponse) => {
+          setTimeout(() => {}, 1000);
 
-        return (
-          <Container key={news.name}>
-            <TextField>
-              <p>{news.provider[0].name}</p>
-              <h2>{news.name}</h2>
-              <a href={news.url} target="_blank">
-                Saiba Mais
-              </a>
-              <div>
-                <p>{news.datePublished.slice(11, 16)}</p>
-              </div>
-            </TextField>
-            <img
-              src={
-                news.image == undefined ? Logo : news.image.thumbnail.contentUrl
-              }
-            />
-          </Container>
-        );
-      })}
+          return (
+            <Container key={news.name}>
+              <TextField>
+                <p>{news.provider[0].name}</p>
+                <h2>{news.name}</h2>
+                <a href={news.url} target="_blank">
+                  Saiba Mais
+                </a>
+                <div>
+                  <p>{news.datePublished.slice(11, 16)}</p>
+                </div>
+              </TextField>
+              <img
+                src={
+                  news.image == undefined
+                    ? Logo
+                    : news.image.thumbnail.contentUrl
+                }
+              />
+            </Container>
+          );
+        })}
     </>
   );
 }

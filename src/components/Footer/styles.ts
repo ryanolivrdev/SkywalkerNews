@@ -19,9 +19,9 @@ export const Container = styled.footer`
     a {
       width: 15ch;
     }
+
     p {
       width: 12ch;
     }
   }
 `;
-

@@ -60,6 +60,7 @@ export const TextField = styled.div`
     a {
       font-size: 87%;
     }
+
     p {
       font-size: 90%;
     }

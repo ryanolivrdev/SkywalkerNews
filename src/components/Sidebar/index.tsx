@@ -11,11 +11,8 @@ import {
   FirstAid,
   IconContext,
 } from "phosphor-react";
+import { SideBarProps } from "../../@types";
 
-interface SideBarProps {
-  isOpen: boolean;
-  CloseNavBar: any;
-}
 
 export function Sidebar(props: SideBarProps) {
   return (

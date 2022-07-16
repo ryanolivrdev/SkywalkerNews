@@ -21,6 +21,7 @@ export const Container = styled.div`
       font-size: 8rem;
     }
   }
+
   .references {
     h2 {
       color: var(--logo-font);
@@ -40,9 +41,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
+
     p {
       margin-bottom: 1.5rem;
     }
+
     a {
       color: var(--text-secondary);
       text-decoration: underline;
