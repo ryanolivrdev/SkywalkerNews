@@ -60,8 +60,8 @@ export const TextField = styled.div`
 
   @media screen and (max-width: 600px) {
     h2 {
-      max-width: 40ch;
-      font-size: 90%;
+      max-width: 35ch;
+      font-size: 95%;
     }
 
     a {
@@ -70,13 +70,6 @@ export const TextField = styled.div`
 
     p {
       font-size: 90%;
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    h2 {
-      max-width: 33ch;
-      font-size: 85%;
     }
   }
 
