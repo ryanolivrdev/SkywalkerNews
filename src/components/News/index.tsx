@@ -39,13 +39,19 @@ export function News(props: TopicProps) {
           return (
             <Container key={news.name}>
               <TextField>
-                <p>{news.provider[0].name}</p>
-                <h2>{news.name}</h2>
+                <p>
+                  <address>{news.provider[0].name}</address>
+                </p>
+                <a href={news.url} className="title">
+                  <h2>{news.name}</h2>
+                </a>
                 <a href={news.url} target="_blank">
                   Saiba Mais
                 </a>
                 <div>
-                  <p>{news.datePublished.slice(11, 16)}</p>
+                  <p>
+                    <time>{news.datePublished.slice(11, 16)}</time>
+                  </p>
                 </div>
               </TextField>
               <img

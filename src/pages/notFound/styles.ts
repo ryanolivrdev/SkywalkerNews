@@ -18,13 +18,18 @@ export const Container = styled.div`
     align-items: center;
 
     h1 {
+      color: #E1E1E6;
       font-size: 8rem;
+    }
+
+    p {
+      color: #E1E1E6;
     }
   }
 
   .references {
     h2 {
-      color: var(--logo-font);
+      color: var(--logoSpanColor);
       @media (max-width: 1080px) {
         font-size: 16px;
       }
@@ -32,6 +37,7 @@ export const Container = styled.div`
       @media (max-width: 300px) {
         text-align: center;
         font-size: 14px;
+
         margin: auto;
       }
     }
@@ -47,7 +53,7 @@ export const Container = styled.div`
     }
 
     a {
-      color: var(--text-secondary);
+      color: #8D8D99;
       text-decoration: underline;
       text-underline-offset: 5px;
     }

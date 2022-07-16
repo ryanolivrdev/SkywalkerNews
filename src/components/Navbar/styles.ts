@@ -3,38 +3,46 @@ import MagnifyingGlass from "../../assets/MagnifyingGlass.svg";
 
 export const Container = styled.nav`
   display: flex;
-  position: fixed;
+  position: sticky;
+  align-items: center;
+  justify-content: space-between;
 
   width: 100vw;
   height: 72px;
   top: 0;
+  overflow: hidden;
+  z-index: 999;
 
-  align-items: center;
-  justify-content: space-between;
   padding: 0 25px;
 
   background-color: var(--navbarColor);
-  border-bottom: 1px solid var(--divider);
+  border-bottom: 1px solid var(--navbarBorderColor);
 
   div {
     display: flex;
     align-items: center;
+
     gap: 1rem;
 
     a {
       font-size: 1.4rem;
+
       h1 {
-        color: var(--logo-secondary);
+        color: var(--logoColor);
+
         @media (max-width: 700px) {
           font-size: 0;
         }
       }
+
       span {
-        color: var(--logo-font);
+        color: var(--logoSpanColor);
       }
+
       @media (max-width: 1000px) {
         font-size: 87.5%;
       }
+
       @media (max-width: 900px) {
         margin-left: 1rem;
       }
@@ -51,38 +59,34 @@ export const Container = styled.nav`
 
     background-repeat: no-repeat;
     background-position: 0.75rem;
-    background-color: var(--divider);
-    color: var(--inputFont);
+
     padding-left: 2.875rem;
     margin-left: -10rem;
 
     width: 30rem;
     height: 3rem;
 
-    border: 1px solid var(--inputBorder);
-    border-radius: 10px;
-
     transition: all 0.2s ease-in;
 
     @media (max-width: 900px) {
       margin-left: 0rem;
     }
+
     @media (max-width: 600px) {
       width: 20rem;
     }
+
     @media (max-width: 450px) {
       width: 15rem;
     }
+
     @media (max-width: 370px) {
       width: 10rem;
     }
+
     @media (max-width: 290px) {
       width: 5rem;
     }
-  }
-  input:hover {
-    background-color: var(--text-font);
-    color: var(--input-hover);
   }
 
   button {

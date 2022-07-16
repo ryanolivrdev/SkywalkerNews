@@ -1,13 +1,24 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Home } from "../pages/home";
-import  { Covid, Economy, Entertainment, Health, MainNews,  Sports, Technology} from "../components/Topics/index"
+import {
+  Covid,
+  Economy,
+  Entertainment,
+  Health,
+  MainNews,
+  Sports,
+  Technology,
+} from "../components/Topics/index";
 import { Search } from "../pages/search";
 import { NotFound } from "../pages/notFound";
 
 export function Router() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/topics/principaisnoticias" replace />}/>
+      <Route
+        path="/"
+        element={<Navigate to="/topics/principaisnoticias" replace />}
+      />
       <Route path="topics" element={<Home />}>
         <Route index element={<MainNews />} />
         <Route path="principaisnoticias" element={<MainNews />} />
@@ -20,10 +31,7 @@ export function Router() {
       </Route>
       <Route path="search/:slug" element={<Search />} />
       <Route path="404" element={<NotFound />} />
-      <Route
-        path="*"
-        element={<Navigate to="/404" replace />}
-      />
+      <Route path="*" element={<Navigate to="/404" replace />} />
     </Routes>
   );
 }

@@ -7,33 +7,31 @@ interface SideBarProps {
 export const Container = styled.aside<SideBarProps>`
   display: flex;
   flex-direction: column;
-  position: fixed;
-  height: 100%;
-  top: 72px;
-  padding-top: 56px;
   align-items: center;
-  width: ${({ isOpen }) => (isOpen ? "252px" : "0")};
 
+  position: fixed;
+  z-index: 998;
+  height: 100%;
+
+  padding-top: 56px;
   gap: 1.688rem;
 
-  background-color: var(--background);
+  width: ${({ isOpen }) => (isOpen ? "252px" : "0")};
 
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
+  border-right: 1px solid var(--navbarBorderColor);
+  background-color: var(--backgroundBody);
 
   a {
     display: flex;
+    align-items: center;
     width: ${({ isOpen }) => (isOpen ? "100%" : "0")};
 
     padding-left: 1.875rem;
-    align-items: center;
     gap: 1rem;
 
     border: none;
     border-radius: 0 0.625rem 0.625rem 0;
 
-    color: var(--text-font);
     background-color: transparent;
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
@@ -45,21 +43,21 @@ export const Container = styled.aside<SideBarProps>`
   }
 
   a:hover {
-    color: var(--link-secondary);
-    background-color: var(--button-hover);
+    color: var(--textSidebarColor);
+    background-color: var(--buttonColorHover);
 
     p {
-      color: var(--link-secondary);
+      color: var(--textSidebarColor);
     }
   }
 
   .AtiveLink {
-    background-color: var(--button);
+    background-color: var(--buttonColor);
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
-    color: var(--link-secondary);
+    color: var(--textSidebarColor);
 
     p {
-      color: var(--link-secondary);
+      color: var(--textSidebarColor);
     }
   }
 `;

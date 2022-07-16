@@ -13,7 +13,6 @@ import {
 } from "phosphor-react";
 import { SideBarProps } from "../../@types";
 
-
 export function Sidebar(props: SideBarProps) {
   return (
     <Container isOpen={props.isOpen}>

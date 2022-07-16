@@ -7,27 +7,28 @@ declare module "styled-components" {
     colors: {
       backgroundBody: string;
 
-      logoFont: string;
-      logoSecondary: string;
+      navbarColor: string;
+      navbarBorderColor: string;
+      logoColor: string;
+      logoSpanColor: string;
+      inputColor: string;
+      inputColorHover: string;
+      inputColorBorder: string;
 
-      titleFont: string;
-      textFont: string;
-      strong: string,
-      inputFont: string;
-      textSecondary: string;
-      linkFont: string;
-      linkSecondary: string;
-      background: string;
-      elements: string;
-      elementsSecondary: string;
-      newsBorder: string;
-      divider: string;
-      navbarColor: string,
-      button: string;
-      buttonHover: string;
-      inputHover: string;
-      inputBorder: string,
-      SkeletonColor: string;
+      textSidebarColor: string;
+      buttonColor: string;
+      buttonColorHover: string;
+
+      articleColor: string;
+      articleColorBorder: string;
+
+      titleColor: string;
+      textColor: string;
+      strongColor: string;
+      linkColor: string;
+
+      boxColor: string;
+      skeletonColor: string;
     };
   }
 }

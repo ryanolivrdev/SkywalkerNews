@@ -3,19 +3,20 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   align-items: center;
 
-  padding-top: 130px;
+  padding-top: 58px;
 
   div {
     max-width: 100%;
   }
+
   @media (max-width: 446px) {
-    padding-top: 110px;
+    padding-top: 38px;
   }
+
   @media (max-width: 416px) {
-    padding-top: 80px;
+    padding-top: 8px;
   }
 `;
 
@@ -33,11 +34,11 @@ export const TextField = styled.div`
 
     padding: 1rem;
 
-    background-color: var(--elements-secondary);
+    background-color: var(--boxColor);
     border-radius: 0.625rem;
 
     span {
-      color: var(--link-font);
+      color: var(--linkColor);
     }
   }
 
@@ -53,6 +54,7 @@ export const TextField = styled.div`
       max-width: 450px;
     }
   }
+
   @media (max-width: 500px) {
     font-size: 85%;
 
@@ -60,9 +62,11 @@ export const TextField = styled.div`
       max-width: 400px;
     }
   }
+
   @media screen and (max-width: 450px) {
     font-size: 80%;
   }
+
   @media screen and (max-width: 417px) {
     margin: 2.1rem 1.2rem 0 1.2rem;
   }

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.footer`
   display: flex;
-
   justify-content: center;
   align-items: center;
 
@@ -10,11 +9,13 @@ export const Container = styled.footer`
   gap: 0.7rem;
 
   a {
-    color: var(--text-secondary);
+    color: var(--textColor);
   }
+
   @media (max-width: 430px) {
     font-size: 90%;
   }
+
   @media (max-width: 400px) {
     a {
       width: 15ch;

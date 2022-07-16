@@ -4,11 +4,11 @@ export const Container = styled.article`
   display: flex;
   justify-content: space-between;
 
-  background-color: var(--elements);
-  border: 1px solid var(--news-border);
+  background-color: var(--articleColor);
+  border: 1px solid var(--articleColorBorder);
   border-radius: 0.625rem;
-  padding: 0.6875rem 1.3rem;
 
+  padding: 0.6875rem 1.3rem;
   margin: 2.2rem 0 0 0;
 
   img {
@@ -23,13 +23,16 @@ export const Container = styled.article`
     }
     min-height: 156px;
   }
+
   @media screen and (max-width: 500px) {
     margin: 2.2rem 1.2rem 0 1.2rem;
     gap: 1rem;
   }
+
   @media screen and (max-width: 400px) {
     gap: 1.2rem;
   }
+
   @media screen and (max-width: 334px) {
     img {
       width: 0;
@@ -47,10 +50,14 @@ export const TextField = styled.div`
     font-size: 1rem;
   }
 
+  .title{
+    text-decoration: none;
+  }
   a {
-    color: var(--link-font);
+    color: var(--linkColor);
     text-decoration: underline;
   }
+
   @media screen and (max-width: 600px) {
     h2 {
       max-width: 40ch;
@@ -72,6 +79,7 @@ export const TextField = styled.div`
       font-size: 85%;
     }
   }
+
   @media screen and (max-width: 400px) {
     gap: 1rem;
   }

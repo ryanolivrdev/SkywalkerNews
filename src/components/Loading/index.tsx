@@ -5,7 +5,7 @@ import ThemeContext from "../../styles/themes/context";
 
 export function Loading() {
   const { theme } = useContext(ThemeContext);
-  let colors = theme.colors.SkeletonColor;
+  let colors = theme.colors.skeletonColor;
 
   return (
     <Container>
