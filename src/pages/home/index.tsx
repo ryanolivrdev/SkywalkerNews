@@ -1,7 +1,7 @@
 import { Outlet, useLocation, useParams } from "react-router-dom";
 import { Container, TextField } from "./styles";
 import { Navbar } from "../../components/Navbar";
-import { Greetings } from "../../components/greetings";
+import { Greetings } from "../../components/Greetings";
 import { News } from "../../components/News";
 import { Footer } from "../../components/Footer";
 
