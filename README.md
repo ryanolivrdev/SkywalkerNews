@@ -1,11 +1,28 @@
-# Skywalker News :newspaper:
+# Skywalker News :newspaper: 
+![React](https://badges.aleen42.com/src/react.svg)
+![React Router Dom](https://badges.aleen42.com/src/react-router.svg)
+![TypeScript](https://badges.aleen42.com/src/typescript.svg) 
+![Vercel](http://therealsujitk-vercel-badge.vercel.app/?app=therealsujitk-vercel-badge)
 
-O projeto se consiste em um site de noticias, usei a Api [`Bing News Search`](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api) para prover as informações mais recente e pesquisas ele pode ser acessado facilmente por [skywalker-news.ryanolivr.dev](skywalker-news.ryanolivr.dev).
+[![Capa](https://cdn.discordapp.com/attachments/897683597329317921/998080535555485696/Capa.png)](https://www.skywalker-news.ryanolivr.dev)
 
-A “arte” do jornalismo é escolher os assuntos que mais interessam ao público e apresentá-los de modo atraente.
-- Luiz Santana de Freitas, 2010
+## Sobre :brazil:
+Que tal ter todos os jornais em só um lugar? O Skywalker News propõem a criação de um site de notícias, onde é usado [`Bing News Search`](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api) para filtrar e promover as melhores e mais recentes informações do mundo!
 
-[Design Figma](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api)
+Com design que se adapta para todos os gostos e dispositivos agora você pode aproveitar da melhor forma o seu café :coffee:. 
+
+Protótipo feito no [Figma](https://www.figma.com/file/OtJXF8eIfZPE3pIt7udb2A/Skywalker-News?node-id=0%3A1) e Desenvolvido em [React](https://pt-br.reactjs.org/), acesse agora mesmo em https://www.skywalker-news.ryanolivr.dev 
+
+> May the Force be with you ou, como dizemos por aqui, **May the News be with you**.
+
+Protótipo: [Figma](https://www.figma.com/file/OtJXF8eIfZPE3pIt7udb2A/Skywalker-News?node-id=0%3A1)
+
+## About :us:
+How about having all the newspapers in one place? Proposes the creation of a news site, where it is used [`Bing News Search`](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api) to promote the best information in Portuguese :brazil:.
+
+Prototype made in [Figma](https://www.figma.com/file/OtJXF8eIfZPE3pIt7udb2A/Skywalker-News?node-id=0%3A1) and Developed in [React](https://reactjs.org/).
+
+> May the Force be with you or, as we say around here, **May the News be with you**.
 
 ## Technologies Used :computer:
 <code><img width="40px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" title = "Figma"/></code>
